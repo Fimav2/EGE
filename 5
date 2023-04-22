@@ -1,0 +1,8 @@
+for i in range(4,500):
+    n = i
+    dv = bin(n)[2:]
+    dv = dv[:-1]
+    dv = dv + dv[1] + dv[1]
+    rez = int(dv,2)
+    if rez > 92:
+        print(i)
