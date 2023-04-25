@@ -1,8 +1,15 @@
-for i in range(4,500):
-    n = i
-    dv = bin(n)[2:]
-    dv = dv[:-1]
-    dv = dv + dv[1] + dv[1]
-    rez = int(dv,2)
-    if rez > 92:
-        print(i)
+for n in range(1,1000):
+    st = bin(n)[2:]
+    if n % 2 == 0:
+        st = st + "10"
+    else:
+        st = st + "11"
+    if st.count("1") % 2 == 0:
+        st = st + st[-1]
+    else:
+        st = st + st[-2]
+    rez = int(st,2)
+    if rez > 44:
+        print(n)
+    
+        
