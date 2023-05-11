@@ -1,15 +1,16 @@
 for n in range(1,1000):
     st = bin(n)[2:]
-    if n % 2 == 0:
-        st = st + "10"
-    else:
-        st = st + "11"
+    st = st + st[-1]
     if st.count("1") % 2 == 0:
-        st = st + st[-1]
+        st = st+ "1"
     else:
-        st = st + st[-2]
+        st = st + "0"
+    if st.count("1") % 2 != 0:
+        st = st + "1"
+    else:
+        st = st + "0"
     rez = int(st,2)
-    if rez > 44:
-        print(n)
-    
+    if rez > 105:
+        print(rez)
         
+
