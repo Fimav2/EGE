@@ -1,1 +1,16 @@
-
+file = open("17-292.txt")
+s = []
+sum_6 = 0
+sum_11 = 0
+kol = 0
+maxi = -1000000
+max_sum = 0
+for i in file:
+    s.append(int(i))
+for i in range(len(s)-1):
+    sum_6 = s[i] % 6 + s[i+1] % 6
+    sum_11 = s[i] % 11 + s[i+1] % 11
+    if sum_6 == sum_11:
+        kol = kol + 1
+        max_sum = max(max_sum,s[i] + s[i+1])
+        print(kol,max_sum)
