@@ -1,0 +1,6 @@
+st = 143 * "687"
+while "68" in st or "7777" in st:
+    st = st.replace("68","7",1)
+    st = st.replace("7777","7",1)
+
+print(st)
