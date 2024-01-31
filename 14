@@ -1,0 +1,8 @@
+def perevod(n,k):
+    ch = ""
+    rez = ""
+    while n > 0:
+        ch = str(n % k)
+        n = n // k
+        rez = ch + rez
+    return rez
