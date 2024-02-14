@@ -1,0 +1,7 @@
+sp = []
+for n in range(2029):
+    if n <=3:
+        sp.append(1)
+    else:
+        sp.append((n+3) * sp[n-2])
+print(sp[2028]/sp[2024])
