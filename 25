@@ -1,0 +1,23 @@
+def perevod(n):
+    index=0
+    new_ch=0
+    while n>0:
+        ch=n%10
+        new_ch=new_ch+ch*(3**index)
+        index=index+1
+        n=n//10
+    return new_ch
+
+
+
+
+for x1 in range(3):
+    for x2 in range(3):
+        for x3 in range(3):
+            for x4 in range(3):
+                for x5 in range(3):
+                    ch="2"+str(x1)+"1"+str(x2)+"2"+str(x3)+"1"+str(x4)+"2"+str(x5)+"1"
+                    ch_tree=int(ch)
+                    ch_des=perevod(ch_tree)
+                    if ch_des%148==0:
+                        print(ch_des,ch_des//148)
