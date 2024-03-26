@@ -1,0 +1,17 @@
+file = open("26-89.txt")
+n = file.readline()
+sp = []
+rez = []
+for s in file:
+    sp.append(int(s))
+sp.sort(reverse = True)
+kor = []
+kor.append(sp[0])
+print(sp)
+for i in range(len(sp)):
+    if kor[-1] - sp[i] >= 3:
+        kor.append(sp[i])
+
+print(len(kor),kor[-1])
+
+
