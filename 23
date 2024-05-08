@@ -1,11 +1,8 @@
 def ff(begin,end):
     if begin > end:
         return 0
-    if begin == 25:
-        return 0
     if begin == end:
         return 1
-    else:
-        return ff(begin+1,end) + ff(2*begin+1,end)
+    return ff(begin+1,end) + ff(begin*2,end)
 
-print(ff(1,31))
+print(ff(1,8)*ff(8,16))
