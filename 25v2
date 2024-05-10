@@ -1,0 +1,8 @@
+d = int("114",8)
+
+for x1 in "01234567":
+    for x2 in "01234567":
+        f = "1" + x1 + "345" + x2 + "700"
+        rez = int(f,8)
+        if rez % d == 0:
+            print(rez,int(rez)//d)
